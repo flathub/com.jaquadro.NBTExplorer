@@ -4,4 +4,4 @@ Comment=A graphical NBT editor for all Minecraft NBT data sources
 Exec=nbtexplorer
 Type=Application
 Icon=com.jaquadro.NBTExplorer
-Categories=Game;
+Categories=Game;Utility;
