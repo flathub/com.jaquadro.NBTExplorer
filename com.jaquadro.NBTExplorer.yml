@@ -43,7 +43,7 @@ modules:
       - type: script
         dest-filename: nbtexplorer
         commands:
-          - exec mono /app/share/nbtexplorer/NBTExplorer.exe
+          - APPDATA=$HOME exec mono /app/share/nbtexplorer/NBTExplorer.exe
       - type: file
         path: com.jaquadro.NBTExplorer.png
       - type: file
