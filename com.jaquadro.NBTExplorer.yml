@@ -28,18 +28,22 @@ modules:
   - name: nbtexplorer
     buildsystem: simple
     build-commands:
+      - /usr/lib/sdk/mono6/bin/msbuild
       - install -D nbtexplorer /app/bin/nbtexplorer
-      - install -D NBTExplorer.exe /app/share/nbtexplorer/NBTExplorer.exe
-      - install -D NBTExplorer.exe.config /app/share/nbtexplorer/NBTExplorer.exe.config
-      - install -D Substrate.dll /app/share/nbtexplorer/Substrate.dll
-      - install -D NBTModel.dll /app/share/nbtexplorer/NBTModel.dll
+      - install -D Staging/NBTExplorer.exe /app/share/nbtexplorer/NBTExplorer.exe
+      - install -D Staging/NBTExplorer.exe.config /app/share/nbtexplorer/NBTExplorer.exe.config
+      - install -D Staging/Substrate.dll /app/share/nbtexplorer/Substrate.dll
+      - install -D Staging/NBTModel.dll /app/share/nbtexplorer/NBTModel.dll
       - install -D com.jaquadro.NBTExplorer.desktop /app/share/applications/com.jaquadro.NBTExplorer.desktop
       - install -D com.jaquadro.NBTExplorer.png /app/share/icons/hicolor/128x128/apps/com.jaquadro.NBTExplorer.png
       - install -D com.jaquadro.NBTExplorer.metainfo.xml /app/share/metainfo/com.jaquadro.NBTExplorer.metainfo.xml
     sources:
-      - type: archive
-        url: https://github.com/jaquadro/NBTExplorer/releases/download/v2.8.0-win/NBTExplorer-2.8.0.zip
-        sha256: 1bf4c3e56a0e8fba911c6c73cc12fbf105c01367d92dcfb9d20b0f529a666e4b
+      - type: git
+        url: https://github.com/jaquadro/NBTExplorer.git
+        tag: v2.8.0-win
+        commit: d29f249d7e489eaa4ccf8ba5b661cfa6ae0466ff
+      - type: patch
+        path: patches/fix-msbuild.patch
       - type: script
         dest-filename: nbtexplorer
         commands:
