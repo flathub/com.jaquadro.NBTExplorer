@@ -28,4 +28,9 @@
             <url>https://github.com/jaquadro/NBTExplorer/releases/tag/v2.8.0-win</url>
         </release>
     </releases>
+    <keywords>
+        <keyword>nbt editor</keyword>
+        <keyword>minecraft nbt</keyword>
+        <keyword>nbt viewer</keyword>
+    </keywords>
 </component>
