@@ -23,8 +23,8 @@ modules:
   - name: libgdiplus
     sources:
       - type: archive
-        url: https://download.mono-project.com/sources/libgdiplus/libgdiplus-6.1.tar.gz
-        sha256: 97d5a83d6d6d8f96c27fb7626f4ae11d3b38bc88a1726b4466aeb91451f3255b
+        url: https://dl.winehq.org/mono/sources/libgdiplus/libgdiplus-6.2.tar.gz
+        sha256: 683adb7d99d03f6ee7985173a206a2243f76632682334ced4cae2fcd20c83bc9
   - name: nbtexplorer
     buildsystem: simple
     build-commands:
